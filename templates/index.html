@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Forex</title>
+</head>
+<body>
+    {% for message in get_flashed_messages() %}
+    <p>
+        {{ message }}
+    </p>
+    {% endfor %}
+    <form action="/convert" method="POST">
+        <label for="convertFrom">Converting from</label>
+        <input type="text" name="convertFrom" id="convertFrom" placeholder="Currency Code" /> <br>
+        <label for="convertTo">Converting to</label>
+        <input type="text" name="convertTo" id="convertTo" placeholder="Currency Code" /> <br>
+        <label for="amount">Amount:</label>
+        <input type="text" name="amount" id="amount" placeholder="Amount" /> <br>
+        <button>Convert</button>
+    </form>
+</body>
+</html>
